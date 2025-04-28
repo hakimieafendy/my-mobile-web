@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Mobile Web App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <style>
+        body {
+            text-align: center;
+        }
+        .custom-content {
+            padding: 20px;
+        }
+        .custom-list li {
+            font-size: 18px;
+            padding: 10px;
+        }
+        .ui-page-theme-b, .ui-page-theme-b .ui-panel-wrapper {
+            background-color: #e0f7fa; /* Light blue background */
+            color: #006064;
+        }
+        .ui-btn {
+            background-color: #00838f !important;
+            border-color: #006064 !important;
+            color: white !important;
+        }
+        .ui-header, .ui-footer {
+            background-color: #006064 !important;
+            color: white !important;
+            border: none;
+        }
+        .ui-content {
+            background-color: #e0f7fa;
+        }
+        .ui-listview li {
+            background: #b2ebf2;
+            border-bottom: 1px solid #006064;
+        }
+        img.profile-pic, img.hobby-pic, img.family-pic, img.result-pic {
+            width: 80%;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Home Page -->
+<div data-role="page" id="home" data-theme="b">
+    <div data-role="header" data-position="fixed">
+        <h1>🏠 Main Menu</h1>
+    </div>
+
+    <div role="main" class="ui-content custom-content">
+        <p>👋 Hello! Welcome to my profile!</p>
+        <div data-role="controlgroup" data-type="horizontal" class="ui-center">
+            <a href="#personal" class="ui-btn ui-icon-user ui-btn-icon-top">Personal Info</a>
+            <a href="#hobby" class="ui-btn ui-icon-heart ui-btn-icon-top">Hobby</a>
+            <a href="#family" class="ui-btn ui-icon-home ui-btn-icon-top">Family</a>
+            <a href="#result" class="ui-btn ui-icon-check ui-btn-icon-top">Exam Results</a>
+        </div>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h4>© Website mobile apps test</h4>
+    </div>
+</div>
+
+<!-- Personal Info Page -->
+<div data-role="page" id="personal" data-theme="b">
+    <div data-role="header" data-position="fixed">
+        <h1>👤 Personal Information</h1>
+    </div>
+
+    <div role="main" class="ui-content custom-content">
+        <!-- Insert your photo -->
+        <img src="adam.jpg"
+ alt="Profile Photo" class="profile-pic">
+        
+        <ul data-role="listview" class="custom-list">
+            <li><strong>Name:</strong> Muhammad Adam Hakimi</li>
+            <li><strong>Age:</strong> 21</li>
+            <li><strong>Email:</strong> AdamHakimi@gmail.com</li>
+        </ul>
+        <a href="#home" data-role="button" data-icon="back" data-transition="slide">Back to Home</a>
+    </div>
+</div>
+
+<!-- Hobby Page -->
+<div data-role="page" id="hobby" data-theme="b">
+    <div data-role="header" data-position="fixed">
+        <h1>🎯 My Hobbies</h1>
+    </div>
+
+    <div role="main" class="ui-content custom-content">
+        <img src="hobby.jpg" alt="Hobby Photo" class="hobby-pic">
+
+        <ul data-role="listview" class="custom-list">
+            <li>📚 Reading</li>
+            <li>🏊‍♂️ Swimming</li>
+            <li>🎮 Gaming</li>
+        </ul>
+        <a href="#home" data-role="button" data-icon="back" data-transition="fade">Back to Home</a>
+    </div>
+</div>
+
+<!-- Family Page -->
+<div data-role="page" id="family" data-theme="b">
+    <div data-role="header" data-position="fixed">
+        <h1>👨‍👩‍👧‍👦 Family Background</h1>
+    </div>
+
+    <div role="main" class="ui-content custom-content">
+        <img src="family.jpg" alt="Family Photo" class="family-pic">
+        <p>I have a small family with 4 members. We live happily together.</p>
+        <a href="#home" data-role="button" data-icon="back" data-transition="pop">Back to Home</a>
+    </div>
+</div>
+
+<!-- Exam Results Page -->
+<div data-role="page" id="result" data-theme="b">
+    <div data-role="header" data-position="fixed">
+        <h1>📚 Exam Results</h1>
+    </div>
+
+    <div role="main" class="ui-content custom-content">
+        <img src="exam.jpg" alt="Exam Results Photo" class="result-pic">
+
+        <ul data-role="listview" class="custom-list">
+            <li><strong>Math:</strong> 95</li>
+            <li><strong>Science:</strong> 88</li>
+            <li><strong>English:</strong> 90</li>
+        </ul>
+        <a href="#home" data-role="button" data-icon="back" data-transition="flip">Back to Home</a>
+    </div>
+</div>
+
+</body>
+</html>
